@@ -37,8 +37,23 @@ const HeroSection = () => {
             <span className="text-sm font-medium text-primary">First Republican Forum</span>
           </div>
 
-          {/* Main Headline */}
-          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6">
+          {/* Gradient Square Behind Headline */}
+          <div className="relative">
+            <div 
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] h-[280px] sm:w-[380px] sm:h-[380px] md:w-[480px] md:h-[480px] lg:w-[580px] lg:h-[580px] rounded-3xl opacity-50 blur-sm pointer-events-none"
+              style={{
+                background: `linear-gradient(135deg, 
+                  hsl(38, 55%, 25%) 0%, 
+                  hsl(38, 55%, 45%) 25%, 
+                  hsl(38, 55%, 71%) 50%, 
+                  hsl(38, 55%, 55%) 75%, 
+                  hsl(38, 55%, 30%) 100%)`,
+                boxShadow: '0 0 120px 40px hsl(38, 55%, 50%, 0.2)',
+              }}
+            />
+            
+            {/* Main Headline */}
+            <h1 className="relative z-10 font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6">
             <span className="text-foreground">AI91: </span>
             <span className="text-gradient-gold">Transforming</span>
             <br />
@@ -47,6 +62,7 @@ const HeroSection = () => {
             <span className="text-foreground">in the </span>
             <span className="text-gradient-gold">Age of AI</span>
           </h1>
+          </div>
 
           {/* Subheadline */}
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
