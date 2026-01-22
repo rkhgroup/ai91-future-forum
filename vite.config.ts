@@ -4,8 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: "/ai91-future-form/", // 🔴 ОБЯЗАТЕЛЬНО для GitHub Pages
-
+  base: "/ai91-future-forum/", // ⬅️ ВАЖНО: forum, не form
   server: {
     host: "::",
     port: 8080,
@@ -13,9 +12,7 @@ export default defineConfig(({ mode }) => ({
       overlay: false,
     },
   },
-
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
-
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
