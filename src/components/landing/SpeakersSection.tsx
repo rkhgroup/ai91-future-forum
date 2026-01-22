@@ -5,52 +5,52 @@ const SpeakersSection = () => {
     {
       name: "Ростилав Коняшкин",
       role: "Первый вице-министр искусственного интеллекта и цифрового развития РК",
-      photo: "/speakers/rostislav.jpg",
+      photo: `${import.meta.env.BASE_URL}speakers/rostislav.jpg`,
     },
     {
       name: "Асылбек Ахметжанов",
       role: "Вице министр просвещения РК ",
-      photo: "/speakers/asylbek.jpg",
+      photo: `${import.meta.env.BASE_URL}speakers/asylbek.jpg`,
     },
     {
       name: "Ышыл Бой Эргюль",
       role: "Основатель Teacher X",
-      photo: "/speakers/yshyl.jpg",
+      photo: `${import.meta.env.BASE_URL}speakers/yshyl.jpg`,
     },
     {
       name: "Александр Гулин",
       role: "Директор частной школы «Снегири»",
-      photo: "/speakers/alex.jpg",
+      photo: `${import.meta.env.BASE_URL}speakers/alex.jpg`,
     },
     {
       name: "Павел Северинец",
       role: "Директор московской частной школы «Хорошкола»",
-      photo: "/speakers/pavel.jpg",
+      photo: `${import.meta.env.BASE_URL}speakers/pavel.jpg`,
     },
     {
       name: "Андрей Комиссаров",
       role: "Директор по искусственному интеллекту корпорации «Синергия»",
-      photo: "/speakers/andrey.jpg",
+      photo: `${import.meta.env.BASE_URL}speakers/andrey.jpg`,
     },
     {
       name: "Нурлан Киясов",
       role: "Основатель образовательной платформы Amansultan",
-      photo: "/speakers/nurlan.jpeg",
+      photo: `${import.meta.env.BASE_URL}speakers/nurlan.jpeg`,
     },
     {
       name: "Айдын Мауытхан",
       role: "Основатель компании NEO AI и специалист по нейросетям",
-      photo: "/speakers/aidyn.jpeg",
+      photo: `${import.meta.env.BASE_URL}speakers/aidyn.jpeg`,
     },
     {
       name: "Ескендир Бестай",
       role: "Тренер-педагог",
-      photo: "/speakers/eskendir.jpg",
+      photo: `${import.meta.env.BASE_URL}speakers/eskendir.jpg`,
     },
     {
       name: "Арсен Байтуков",
       role: "Эксперт в образовании",
-      photo: "/speakers/arsen.jpg",
+      photo: `${import.meta.env.BASE_URL}speakers/arsen.jpg`,
     },
   ];
 

@@ -8,11 +8,21 @@ const HeroSection = () => {
 
   const organizers = useMemo(
     () => [
-      { title: "Amansultan", subtitle: t("hero_org_amansultan") },
-      { title: t("hero_org_school_title"), subtitle: t("hero_org_school_sub") },
-      { title: t("hero_org_uo_title"), subtitle: t("hero_org_uo_sub") },
+      {
+        alt: "Amansultan",
+        src: `${import.meta.env.BASE_URL}organizers/amansultan.png`,
+      },
+      {
+        alt: "91 School",
+        src: `${import.meta.env.BASE_URL}organizers/school91.png`,
+      },
+      {
+        alt: "UO",
+        src: `${import.meta.env.BASE_URL}organizers/uo.png`,
+        caption: "Управление образованием г. Астана",
+      },
     ],
-    [t]
+    []
   );
 
   return (
@@ -20,7 +30,7 @@ const HeroSection = () => {
       {/* BACKGROUND STACK */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <img
-          src="/hero/earth.jpg"
+          src={`${import.meta.env.BASE_URL}hero/earth.jpg`}
           alt=""
           draggable={false}
           className="w-full h-full object-cover select-none"
@@ -36,17 +46,22 @@ const HeroSection = () => {
         <div className="max-w-5xl mx-auto">
           {/* Badges row */}
           <div className="flex flex-wrap justify-center gap-3 mb-10">
-<span className="inline-flex items-center gap-2 rounded-full
-  bg-primary/10 px-5 py-2 text-sm font-semibold
-  ring-1 ring-primary/20 shadow-sm backdrop-blur-sm
-  text-white/90">
+            <span
+              className="inline-flex items-center gap-2 rounded-full
+                bg-primary/10 px-5 py-2 text-sm font-semibold
+                ring-1 ring-primary/20 shadow-sm backdrop-blur-sm
+                text-white/90"
+            >
               <span className="h-2 w-2 rounded-full bg-primary" />
               {t("hero_badge_date")}
             </span>
-<span className="inline-flex items-center gap-2 rounded-full
-  bg-primary/10 px-5 py-2 text-sm font-semibold
-  ring-1 ring-primary/20 shadow-sm backdrop-blur-sm
-  text-white/90">
+
+            <span
+              className="inline-flex items-center gap-2 rounded-full
+                bg-primary/10 px-5 py-2 text-sm font-semibold
+                ring-1 ring-primary/20 shadow-sm backdrop-blur-sm
+                text-white/90"
+            >
               {t("hero_badge_forum")}
             </span>
           </div>
@@ -65,7 +80,7 @@ const HeroSection = () => {
           </div>
 
           {/* Subheadline */}
-<p className="text-base sm:text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-12">
+          <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-12">
             {t("hero_sub")}
           </p>
 
@@ -82,7 +97,7 @@ const HeroSection = () => {
 
           {/* Organizers marquee */}
           <div className="relative max-w-4xl mx-auto">
-<p className="text-base sm:text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-12">
+            <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-12">
               {t("hero_org_label")}
             </p>
 
@@ -94,38 +109,63 @@ const HeroSection = () => {
                 {[...organizers, ...organizers].map((org, index) => (
                   <div
                     key={index}
-                    className="min-w-[240px] premium-card px-6 py-4 text-center bg-card/70 backdrop-blur-sm border border-primary/10 shadow-sm"
+                    className="
+                      min-w-[240px] h-[120px]
+                      premium-card px-6 py-4
+                      flex flex-col items-center justify-center gap-2
+                      bg-white/85 backdrop-blur-sm
+                      border border-primary/10
+                      shadow-sm
+                      text-center
+                    "
                   >
-                    <div className="font-semibold text-foreground">{org.title}</div>
-                    <div className="text-sm text-muted-foreground mt-1">
-                      {org.subtitle}
+                    {/* Logo normalization container */}
+                    <div className="flex items-center justify-center h-[48px] w-full">
+                      <img
+                        src={org.src}
+                        alt={org.alt}
+                        draggable={false}
+                        className={`
+                          object-contain
+                          ${org.alt === "91 School"
+                            ? "max-h-[68px] max-w-[190px]"
+                            : "max-h-[60px] max-w-[160px]"
+                          }
+                        `}
+                      />
                     </div>
+
+                    {/* Caption only for UO */}
+                    {org.caption && (
+                      <span className="text-[13px] leading-tight text-muted-foreground max-w-[200px]">
+                        {org.caption}
+                      </span>
+                    )}
                   </div>
                 ))}
               </div>
             </div>
           </div>
 
-{/* Stats */}
-<div className="mt-20 pb-20 w-full">
-  <div className="grid w-full grid-cols-[1fr_auto_1fr] items-start">
-    {/* LEFT */}
-    <div className="justify-self-start">
-      <Stat value="250+" label={t("hero_stat_1")} />
-    </div>
+          {/* Stats */}
+          <div className="mt-20 pb-20 w-full">
+            <div className="grid w-full grid-cols-[1fr_auto_1fr] items-start">
+              {/* LEFT */}
+              <div className="justify-self-start">
+                <Stat value="250+" label={t("hero_stat_1")} />
+              </div>
 
-    {/* CENTER (100% строго по центру) */}
-    <div className="justify-self-center translate-x-[-50px]">
-      <Stat value="10+" label={t("hero_stat_2")} />
-    </div>
+              {/* CENTER */}
+              <div className="justify-self-center translate-x-[-50px]">
+                <Stat value="10+" label={t("hero_stat_2")} />
+              </div>
 
-    {/* RIGHT */}
-    <div className="justify-self-end">
-      <Stat value="1" label={t("hero_stat_3")} />
-    </div>
-  </div>
-</div>
-
+              {/* RIGHT */}
+              <div className="justify-self-end">
+                <Stat value="1" label={t("hero_stat_3")} />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -218,10 +258,9 @@ const HeroSection = () => {
             rgba(15, 18, 25, 0.75) 65%,
             rgba(248, 250, 252, 1) 100%
           );
-        
         }
-
       `}</style>
+
       {/* HERO → NEXT SECTION BLEND */}
       <div className="absolute inset-x-0 bottom-0 h-[50px] pointer-events-none hero-section-blend z-30" />
     </section>
@@ -255,6 +294,5 @@ const Divider = () => (
     "
   />
 );
-
 
 export default HeroSection;
