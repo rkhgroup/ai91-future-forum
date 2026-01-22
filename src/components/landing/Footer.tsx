@@ -35,11 +35,10 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <a href="#" className="inline-flex items-center gap-2 mb-4">
-              <Sparkles className="w-6 h-6 text-primary" />
               <span className="text-2xl font-display font-bold text-gradient-gold">AI91</span>
             </a>
             <p className="text-muted-foreground mb-6 max-w-sm">
-              The First Republican Forum for Education Leaders — transforming school governance in the age of artificial intelligence.
+              Первый Республиканский форум для лидеров в сфере образования — преобразование управления школами в эпоху искусственного интеллекта.
             </p>
             
             {/* Contact Info */}
@@ -50,7 +49,7 @@ const Footer = () => {
               </a>
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <MapPin className="w-4 h-4" />
-                Astana, Kazakhstan
+                Астана, Казахстан
               </div>
               <a href="tel:+77001234567" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
                 <Phone className="w-4 h-4" />
@@ -61,7 +60,7 @@ const Footer = () => {
 
           {/* Forum Links */}
           <div>
-            <h4 className="font-display font-semibold text-foreground mb-4">Forum</h4>
+            <h4 className="font-display font-semibold text-foreground mb-4">Форум</h4>
             <ul className="space-y-3">
               {links.forum.map((link) => (
                 <li key={link.label}>
@@ -78,7 +77,7 @@ const Footer = () => {
 
           {/* Resources Links */}
           <div>
-            <h4 className="font-display font-semibold text-foreground mb-4">Resources</h4>
+            <h4 className="font-display font-semibold text-foreground mb-4">Ресуры</h4>
             <ul className="space-y-3">
               {links.resources.map((link) => (
                 <li key={link.label}>
@@ -95,7 +94,7 @@ const Footer = () => {
 
           {/* Legal Links */}
           <div>
-            <h4 className="font-display font-semibold text-foreground mb-4">Legal</h4>
+            <h4 className="font-display font-semibold text-foreground mb-4">Документы</h4>
             <ul className="space-y-3">
               {links.legal.map((link) => (
                 <li key={link.label}>
@@ -117,7 +116,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            © 2024 AI91 Forum. All rights reserved.
+            © 2026 AI91 Forum. All rights reserved.
           </p>
 
           {/* Social Links */}

@@ -8,27 +8,27 @@ import {
 const FAQSection = () => {
   const faqs = [
     {
-      question: "Who is this forum for?",
+      question: "Для кого предназначен этот форум?",
       answer: "AI91 is designed for school principals, education administrators, government officials, EdTech developers, teachers, and anyone passionate about transforming education through AI. Whether you're an educator looking to adapt to new technologies or a policymaker shaping the future of learning, this forum is for you.",
     },
     {
-      question: "When and where will it take place?",
+      question: "Когда и где это будет проходить?",
       answer: "The forum will be held in Astana, Kazakhstan. The exact date and venue will be announced soon. Stay tuned for updates on our website and social media channels.",
     },
     {
-      question: "How can I pay for tickets?",
+      question: "Как я могу оплатить билеты?",
       answer: "We accept various payment methods including credit/debit cards, bank transfers, and popular local payment systems. All payments are processed securely through our trusted payment partners.",
     },
     {
-      question: "Will participants receive a certificate?",
+      question: "Участники получат сертификат?",
       answer: "Yes! All registered participants who attend the forum will receive an official certificate of attendance that can be used for professional development credits.",
     },
     {
-      question: "Is online attendance available?",
+      question: "Доступно ли онлайн-посещение?",
       answer: "We are exploring options for virtual participation. Priority is given to in-person attendees, but stay tuned for announcements about potential livestream access.",
     },
     {
-      question: "Can I get a refund if I can't attend?",
+      question: "Могу ли я получить возмещение, если не смогу присутствовать?",
       answer: "Refunds are available up to 14 days before the event. After that, tickets can be transferred to another attendee. Please contact our support team for assistance.",
     },
   ];
@@ -39,11 +39,11 @@ const FAQSection = () => {
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            Frequently Asked{" "}
-            <span className="text-gradient-gold">Questions</span>
+            Часто задаваемые{" "}
+            <span className="text-gradient-gold">вопросы</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Everything you need to know about AI91
+            Все, что вам нужно знать об AI91
           </p>
         </div>
 

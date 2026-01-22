@@ -1,97 +1,138 @@
-import { Linkedin, Twitter } from "lucide-react";
+import { Linkedin } from "lucide-react";
 
 const SpeakersSection = () => {
   const speakers = [
     {
-      name: "Dr. Aigerim Suleimenova",
-      role: "Ministry of Education, Kazakhstan",
-      expertise: "Education Policy",
+      name: "Ростилав Коняшкин",
+      role: "Первый вице-министр искусственного интеллекта и цифрового развития РК",
+      photo: "/speakers/rostislav.jpg",
     },
     {
-      name: "Prof. Michael Chen",
-      role: "Stanford AI Lab",
-      expertise: "AI in Learning",
+      name: "Асылбек Ахметжанов",
+      role: "Вице министр просвещения РК ",
+      photo: "/speakers/asylbek.jpg",
     },
     {
-      name: "Saule Nazarbayeva",
-      role: "Founder, EduTech KZ",
-      expertise: "EdTech Innovation",
+      name: "Ышыл Бой Эргюль",
+      role: "Основатель Teacher X",
+      photo: "/speakers/yshyl.jpg",
     },
     {
-      name: "Dr. James Morrison",
-      role: "UNESCO Education Sector",
-      expertise: "Global Education",
+      name: "Александр Гулин",
+      role: "Директор частной школы «Снегири»",
+      photo: "/speakers/alex.jpg",
     },
     {
-      name: "Aida Karimova",
-      role: "School Principal, Almaty",
-      expertise: "School Leadership",
+      name: "Павел Северинец",
+      role: "Директор московской частной школы «Хорошкола»",
+      photo: "/speakers/pavel.jpg",
     },
     {
-      name: "Prof. Elena Volkova",
-      role: "Moscow State University",
-      expertise: "Pedagogy Research",
+      name: "Андрей Комиссаров",
+      role: "Директор по искусственному интеллекту корпорации «Синергия»",
+      photo: "/speakers/andrey.jpg",
+    },
+    {
+      name: "Нурлан Киясов",
+      role: "Основатель образовательной платформы Amansultan",
+      photo: "/speakers/nurlan.jpeg",
+    },
+    {
+      name: "Айдын Мауытхан",
+      role: "Основатель компании NEO AI и специалист по нейросетям",
+      photo: "/speakers/aidyn.jpeg",
+    },
+    {
+      name: "Ескендир Бестай",
+      role: "Тренер-педагог",
+      photo: "/speakers/eskendir.jpg",
+    },
+    {
+      name: "Арсен Байтуков",
+      role: "Эксперт в образовании",
+      photo: "/speakers/arsen.jpg",
     },
   ];
 
   return (
     <section id="speakers" className="relative py-24 md:py-32">
-      <div className="container mx-auto px-4 md:px-6">
+      {/* Background accent */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute left-1/2 top-0 -translate-x-1/2 w-[900px] h-[420px] bg-primary/5 blur-3xl rounded-full" />
+      </div>
+
+      <div className="relative z-10 container mx-auto px-4 md:px-6">
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center mb-16">
+        <div className="max-w-3xl mx-auto text-center mb-14 md:mb-18">
+          <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-foreground ring-1 ring-primary/15 mb-6">
+            Экспертный состав форума
+          </div>
+
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            <span className="text-gradient-gold">Expected</span> Speakers
+            <span className="text-gradient-gold">Ожидаемые</span> спикеры
           </h2>
-          <p className="text-lg text-muted-foreground">
-            World-class experts shaping the future of AI in education
+
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            Руководители, исследователи и практики, формирующие подходы к управлению и внедрению
+            искусственного интеллекта в образовании
           </p>
         </div>
 
         {/* Speakers Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
           {speakers.map((speaker, index) => (
-            <div
-              key={index}
-              className="premium-card p-6 hover-lift group"
-            >
-              {/* Avatar Placeholder */}
-              <div className="relative w-24 h-24 mx-auto mb-6">
-                <div className="w-full h-full rounded-full bg-gradient-to-br from-primary/30 to-primary/10 flex items-center justify-center">
-                  <span className="text-3xl font-display font-bold text-primary">
-                    {speaker.name.split(' ').map(n => n[0]).join('')}
-                  </span>
+            <div key={index} className="premium-card p-5 text-left hover-lift group">
+              {/* Photo */}
+              <div className="relative mb-4 overflow-hidden rounded-xl border border-border bg-secondary ring-1 ring-primary/10">
+                {/* Portrait ratio for speaker photos */}
+                <div className="aspect-[3/4] w-full max-w-[260px] mx-auto">
+                  <img
+                    src={speaker.photo}
+                    alt={speaker.name}
+                    loading="lazy"
+                    className="h-full w-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                    onError={(e) => {
+                      e.currentTarget.style.display = "none";
+                      const fallback = e.currentTarget.nextElementSibling as HTMLElement | null;
+                      if (fallback) fallback.style.display = "flex";
+                    }}
+                  />
+
+                  {/* Placeholder — hidden by default, shows only if image fails */}
+                  <div
+                    className="absolute inset-0 items-center justify-center"
+                    style={{ display: "none" }}
+                  >
+                    <span className="text-3xl font-display font-bold text-primary/60">
+                      {speaker.name
+                        .split(" ")
+                        .map((n) => n[0])
+                        .slice(0, 2)
+                        .join("")}
+                    </span>
+                  </div>
                 </div>
-                {/* Glow effect */}
-                <div className="absolute inset-0 rounded-full bg-primary/20 blur-xl opacity-0 group-hover:opacity-50 transition-opacity" />
               </div>
 
               {/* Info */}
-              <div className="text-center">
-                <h3 className="font-display text-lg font-semibold text-gradient-gold mb-1">
-                  {speaker.name}
-                </h3>
-                <p className="text-sm text-foreground mb-2">{speaker.role}</p>
-                <p className="text-xs text-muted-foreground mb-4">{speaker.expertise}</p>
+              <h3 className="font-display text-base font-semibold text-foreground leading-snug">
+                {speaker.name}
+              </h3>
 
-                {/* Social Links */}
-                <div className="flex items-center justify-center gap-3">
-                  <button className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center hover:bg-primary/20 transition-colors">
-                    <Linkedin className="w-4 h-4 text-muted-foreground" />
-                  </button>
-                  <button className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center hover:bg-primary/20 transition-colors">
-                    <Twitter className="w-4 h-4 text-muted-foreground" />
-                  </button>
-                </div>
-              </div>
+              <p className="text-xs text-foreground/80 leading-relaxed mt-1">
+                {speaker.role}
+              </p>
+
+              {!!speaker.expertise && (
+                <p className="text-xs text-muted-foreground mt-2">{speaker.expertise}</p>
+              )}
             </div>
           ))}
         </div>
 
-        {/* More speakers coming */}
+        {/* Note */}
         <div className="mt-12 text-center">
-          <p className="text-muted-foreground">
-            And many more speakers to be announced...
-          </p>
+          <p className="text-sm text-muted-foreground">Список спикеров будет дополняться</p>
         </div>
       </div>
 

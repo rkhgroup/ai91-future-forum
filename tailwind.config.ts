@@ -52,10 +52,10 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         gold: {
-          DEFAULT: "hsl(38, 55%, 71%)",
-          light: "hsl(45, 60%, 75%)",
-          dark: "hsl(35, 50%, 55%)",
-          muted: "hsl(38, 40%, 50%)",
+          DEFAULT: "#5F6EF5",  // primary
+          light: "#78A9F9",    // secondary
+          dark: "#4B59D6",     // чуть темнее primary (для hover/active если нужно)
+          muted: "#EAF0FF",    // светлый фон/подложки
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -109,13 +109,13 @@ export default {
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-gold": "linear-gradient(135deg, hsl(38, 55%, 71%) 0%, hsl(45, 60%, 55%) 50%, hsl(38, 55%, 71%) 100%)",
-        "gradient-gold-soft": "linear-gradient(135deg, hsl(38, 55%, 71%, 0.15) 0%, hsl(45, 60%, 55%, 0.05) 100%)",
+        "gradient-gold": "linear-gradient(135deg, #5F6EF5 0%, #78A9F9 50%, #5F6EF5 100%)",
+        "gradient-gold-soft": "linear-gradient(135deg, rgba(95,110,245,0.15) 0%, rgba(120,169,249,0.08) 100%)",
       },
       boxShadow: {
-        gold: "0 0 60px -12px hsl(38, 55%, 71%, 0.4)",
-        "gold-sm": "0 4px 24px -4px hsl(38, 55%, 71%, 0.3)",
-        premium: "0 8px 32px -8px hsl(0, 0%, 0%, 0.5)",
+        gold: "0 0 60px -12px rgba(95,110,245,0.45)",
+        "gold-sm": "0 4px 24px -4px rgba(120,169,249,0.40)",
+        premium: "0 8px 32px -8px rgba(0,0,0,0.5)",
       },
     },
   },
