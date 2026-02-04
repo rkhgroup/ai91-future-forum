@@ -404,7 +404,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   text-2xl font-display font-bold\r
                   bg-gradient-to-r from-blue-400 via-cyan-400 to-violet-500\r
                   bg-clip-text text-transparent\r
-                `,children:"AI91"})}),u.jsx("p",{className:"text-sm leading-relaxed text-white/70 max-w-md",children:e("footer_description")}),u.jsxs("div",{className:"mt-6 space-y-3",children:[u.jsxs("div",{className:"flex items-center gap-3 text-sm text-white/70",children:[u.jsx(Ag,{className:"w-4 h-4 opacity-80"}),e("footer_location")]}),u.jsxs("a",{href:"tel:+77001234567",className:"flex items-center gap-3 text-sm text-white/70 hover:text-cyan-400 transition-colors",children:[u.jsx(zf,{className:"w-4 h-4 opacity-80"}),"+7 700 123 45 67"]})]})]}),u.jsxs("div",{className:`\r
+                `,children:"AI91"})}),u.jsx("p",{className:"text-sm leading-relaxed text-white/70 max-w-md",children:e("footer_description")}),u.jsxs("div",{className:"mt-6 space-y-3",children:[u.jsxs("div",{className:"flex items-center gap-3 text-sm text-white/70",children:[u.jsx(Ag,{className:"w-4 h-4 opacity-80"}),e("footer_location")]}),u.jsxs("a",{href:"tel:+77777670161",className:"flex items-center gap-3 text-sm text-white/70 hover:text-cyan-400 transition-colors",children:[u.jsx(zf,{className:"w-4 h-4 opacity-80"}),"+7 777 767 01 61"]})]})]}),u.jsxs("div",{className:`\r
               hidden lg:block\r
               lg:col-span-4\r
               rounded-3xl lg:rounded-none\r
@@ -425,7 +425,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     hover:ring-cyan-400/40\r
                     hover:bg-cyan-400/10\r
                     transition-all\r
-                  `,children:u.jsx(i.icon,{className:"w-4 h-4 text-white/80 group-hover:text-cyan-400"})},i.label))}),u.jsx("div",{className:"mt-6 grid grid-cols-2 gap-3 lg:hidden",children:u.jsxs("a",{href:"tel:+77001234567",className:`\r
+                  `,children:u.jsx(i.icon,{className:"w-4 h-4 text-white/80 group-hover:text-cyan-400"})},i.label))}),u.jsx("div",{className:"mt-6 grid grid-cols-2 gap-3 lg:hidden",children:u.jsxs("a",{href:"tel:+77777670161",className:`\r
                   inline-flex items-center justify-center gap-2\r
                   rounded-2xl px-4 py-3\r
                   bg-white/5 ring-1 ring-white/10\r
